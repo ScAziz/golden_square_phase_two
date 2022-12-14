@@ -15,6 +15,13 @@ RSpec.describe "make_snippet method" do
         end
     end
 
+    context "given a string with six or more words" do 
+        it "returns the first five words followed by ..." do
+            result = make_snippet("the big fat lazy dog ran")
+            expect(result).to eq "the big fat lazy dog ..."
+        end
+    end
+
     
         
 end
